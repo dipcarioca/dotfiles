@@ -1,0 +1,131 @@
+// -*- mode: jsonc -*-
+{
+    "output": ["eDP-1", "HDMI-A-2"],
+    "layer": "top",     
+    "position": "top", 
+    "height": 45, 
+    "modules-left": [
+        "hyprland/workspaces",
+        "hyprland/window"
+    ],
+    "modules-center": [
+        "clock"
+    ],
+    "modules-right": [
+        "tray",
+        "temperature",
+        "cpu",
+        "battery",
+        "pulseaudio",
+        "backlight",
+        "custom/notification"
+    ],
+
+    "hyprland/window": {
+    "format": "{title}",
+    "separate-outputs": true,
+    "max-length": 40,         
+    "tooltip": true
+    },
+
+    "hyprland/workspaces": {
+    "format": "{icon}",
+    "on-click": "activate",
+    "format-icons": {
+    "urgent": "",
+    "active": "",
+    "default": "",
+    "1": "1",
+    "2": "2",
+    "3": "3",
+    "4": "4",
+    "5": "5",
+    "6": "6",
+    "7": "7",
+    "8": "8",
+    "9": "9"
+  },
+  "sort-by-number": true,
+  "format-window-separator": "",
+  "icon-size":15
+  },
+   "tray": {
+        "icon-size": 15,
+        "spacing": 10,
+        "show-passive-items": true
+    },
+    "clock": {
+        "timezone": "America/Sao_Paulo",
+        "tooltip-format": "<big>{:%Y %B}</big>\n<tt><small>{calendar}</small></tt>",
+        "format": " {:%d/%m/%Y |  %H:%M}"
+    },
+    "cpu": {
+        "format": "  {usage}%",
+        "tooltip": false
+    },
+    "temperature": {
+        // "thermal-zone": 2,
+        // "hwmon-path": "/sys/class/hwmon/hwmon2/temp1_input",
+        "critical-threshold": 60,
+        // "format-critical": "{temperatureC}°C {icon}",
+        "format": "{icon} {temperatureC}°C",
+        "format-icons": ["", "", ""]
+    },
+
+    "backlight": {
+        // "device": "acpi_video1",
+        "format": "{icon} {percent}%",
+        "format-icons": ["", "", "", "", "", "", "", "", ""],
+        "on-click": "~/.config/waybar/scripts/hyprsunset.sh",
+        "scroll-step": 1
+        }, 
+
+    "battery": {
+        "states": {
+            "full": 82,
+            "warning": 30,
+            "critical": 15
+        },
+        "format": "{icon} {capacity}%",
+        "format-full": "{icon} {capacity}%",
+        "format-charging": " {capacity}%",
+        "format-plugged": " {capacity}%",
+        "format-alt": "{icon} {time}",
+        "format-icons": ["", "", "", "", ""]
+    },
+
+    "pulseaudio": {
+        // "scroll-step": 1, // %, can be a float
+        "format": "{icon} {volume}%",
+        "format-bluetooth": "{icon} {volume}%",
+        "format-icons": {
+            "headphone": " ",
+            "default": [" ", " ", " "]
+        },
+        "on-click": "wpctl set-mute @DEFAULT_AUDIO_SINK@ toggle",
+        "on-click-right": "pavucontrol",
+        
+        "scroll-step": 1
+    },
+
+    "custom/notification": {
+    "tooltip-format": "Notificações",
+    "format": "{icon}",
+    "format-icons": {
+        "notification": "",
+        "none": "",
+        "dnd-notification": "",
+        "dnd-none": "",
+        "inhibited-notification": "",
+        "inhibited-none": "",
+        "dnd-inhibited-notification": "",
+        "dnd-inhibited-none": ""
+    },
+        "return-type": "json",
+        "exec-if": "which swaync-client",
+        "exec": "swaync-client -swb",
+        "on-click": "swaync-client -t -sw",
+        "on-click-right": "swaync-client -d -sw",
+        "escape": true
+    },
+}
