@@ -35,7 +35,7 @@ chmod +x install.sh
 - **Fastfetch** – system info
 
 ## Apperance
-- **Wallpper**: Chainsaw Man
+- **Wallpaper**: Chainsaw Man
 - **Pywal** – generates color schemes from wallpaper  
 - **Colorz** – color extraction backend
 - **Theme** - [Flat Remix GTK (Red)](https://github.com/daniruiz/Flat-Remix-GTK)
