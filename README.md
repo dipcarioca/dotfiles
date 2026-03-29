@@ -1,5 +1,5 @@
 
-## This is My Config :D
+### This is My Config :D
 ![screenshot](https://cdn.discordapp.com/attachments/949122631259533353/1487610269004857426/image.png?ex=69c9c486&is=69c87306&hm=43a4182ccf680796451cca8a11ab05aad9224957b3ee498d11fe039054d240b9)
 
 
@@ -8,7 +8,7 @@
 
 > You will first need to clone the repository and access 
 ```bash
-git clone https://github.com/dipcarioca/dotfiles
+git clone https://github.com/dipcarioca/dotfiles.git
 cd dotfiles
 ```
 
@@ -22,15 +22,56 @@ chmod +x install.sh
 ./install.sh 
 ```
 
-# What will you install for Dotfiles
+## What will you install for Dotfiles
 
-- Hyprland ecosystem: hyprlock, hyprpaper, hyprsunset
-- Programs for WM: Waybar, Rofi, Kitty, Pywal, Colorz, SwayNc, Brightnessctl, Playerctl, Nwg-look, Nwg-Dock
-- Personal use: Code, Firefox, Ark, Vim, Neovim, Blueman, Flameshot, Fastfetch
-- System Tools: Dolphin, Pavucomtrol, Polkit KDE Agent, UFW, NetworkManager, SDDM
-- Fonts: Monocraft, Hack, Jetbrains Mono Nerd, Hack Nerd Fonts, SF Pro Display, Stretch Pro, Suisse In'tl Mono
+# Personal Use
+- **Firefox** – web browser  
+- **Code** – code editor  
+- **MPV** – media player  
+- **Flameshot** – screenshots  
+- **Fastfetch** – system info
 
+# Apperance
 - Wallpper: Chainsaw Man
+- **Pywal** – generates color schemes from wallpaper  
+- **Colorz** – color extraction backend
 - Theme: [Flat Remix GTK (Red)](https://github.com/daniruiz/Flat-Remix-GTK)
 - Cursor: [Breeze Dark Red Cursor](https://store.kde.org/p/2108645)
 - Icons: [Nordzy Icons (Red Dark)](https://github.com/MolassesLover/Nordzy-icon)
+
+# Hyprland ecosystem** 
+
+- **Hyprland** – dynamic tiling Wayland compositor  
+- **Hyprlock** – lock screen  
+- **Hyprpaper** – wallpaper manager  
+- **Hyprsunset** – blue light filter (yes.) 
+
+# Hyprland Utilities
+- **Waybar** – customizable status bar  
+- **Rofi** – application launcher  
+- **Kitty** – GPU-accelerated terminal  
+- **SwayNC** – notification center  
+- **Brightnessctl** – brightness control  
+- **Playerctl** – media control  
+- **Nwg-look** – GTK settings manager  
+- **Nwg-dock-hyprland** – dock for Hyprland
+
+# System Tools
+- **Dolphin** – file manager  
+- **Ark** – archive manager  
+- **Pavucontrol** – audio control  
+- **Blueman** – Bluetooth manager  
+- **Polkit KDE Agent** – authentication dialogs  
+- **UFW** – firewall  
+- **NetworkManager** – network handling  
+- **SDDM** – display/login manager  
+
+
+# Fonts
+- **JetBrains Mono Nerd Font**  
+- **Hack Nerd Font**  
+- **Hack**  
+- **Monocraft**  
+- **SF Pro Display**  
+- **Stretch Pro**  
+- **Suisse Int'l Mono**
