@@ -6,7 +6,7 @@
 > [!CAUTION]
 > I'm new to programming, so I don't come to say that this command is 100% stable, maybe it may not work, especially if you don't use arch or arch-based distro (you need to have an arch distro)
 
-# Installtion
+# Installation
 
 > You will first need to clone the repository and access 
 ```bash
