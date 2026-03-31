@@ -1,7 +1,8 @@
 
 #                  This is My Config :D
-![screenshot](https://cdn.discordapp.com/attachments/949122631259533353/1487610269004857426/image.png?ex=69c9c486&is=69c87306&hm=43a4182ccf680796451cca8a11ab05aad9224957b3ee498d11fe039054d240b9)
-
+<p align="center">
+  <img src="src/rice.png" width="800"/>
+</p>
 
 > [!CAUTION]
 > I'm new to programming, so I don't come to say that this command is 100% stable, maybe it may not work, especially if you don't use arch or arch-based distro (you need to have an arch distro)
@@ -35,7 +36,7 @@ chmod +x install.sh
 - **Fastfetch** – system info
 
 ## Apperance
-- **Wallpaper**: Chainsaw Man
+- **Wallpaper**: Yoru - Chainsaw Man
 - **Pywal** – generates color schemes from wallpaper  
 - **Colorz** – color extraction backend
 - **Theme** - [Flat Remix GTK (Red)](https://github.com/daniruiz/Flat-Remix-GTK)
@@ -48,6 +49,7 @@ chmod +x install.sh
 - **Hyprlock** – lock screen  
 - **Hyprpaper** – wallpaper manager  
 - **Hyprsunset** – blue light filter (yes.) 
+- **Hyprshot** –  screenshot utility 
 
 ## Hyprland Utilities
 - **Waybar** – customizable status bar  
