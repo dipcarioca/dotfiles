@@ -2,12 +2,12 @@
      border: none;
      border-radius: 0;
      min-height: 0;
-     font-family: MonoCraft, Hack Nerd Font, NotoSans;
-     font-size: 13px;
+     font-family: JetBrainsMono NFM SemiBold, NotoSans;
+     font-size: 14px;
 }
 
 window#waybar {
-    background-color: #0e0e0e;
+    background-color: transparent;
     transition-property: background-color;
     transition-duration: .5s;
 }
