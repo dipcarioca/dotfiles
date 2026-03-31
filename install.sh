@@ -7,17 +7,17 @@ sudo pacman -Syu --noconfirm
 
 echo "==> installing pacotes..."
 sudo pacman -S --needed --noconfirm \
-  hyprland hyprlock hyprsunset hyprpaper waybar swaync \
-  kitty firefox rofi fastfetch python-pywal colorz fish flameshot code \
+  hyprland hyprlock hyprsunset hyprpaper hyprshot waybar swaync \
+  kitty rofi fastfetch python-pywal colorz flatpak fish code \
   kservice dolphin dolphin-plugins qt5-wayland qt6-wayland ark pavucontrol \
-  playerctl brightnessctl ttf-hack ttf-hack-nerd python-pip ttf-jetbrains-mono-nerd ufw \
+  playerctl brightnessctl python-pip ttf-jetbrains-mono-nerd ufw \
   blueman networkmanager network-manager-applet xorg-xwayland polkit-kde-agent \
   qt6ct sddm neovim vim wget tar unzip nwg-look nwg-dock-hyprland nwg-drawer \
   xdg-desktop-portal-hyprland xdg-desktop-portal-gtk mpv
- 
-echo "==> installing wlogout by the aur..."
+
 command -v yay >/dev/null || { echo "yay not installed"; exit 1; }
 yay -S --noconfirm wlogout 
+flatpak install --u app.zen_browser.zen
 
 echo "==> changing shell for fish and change the terminal color..."
 chsh -s /bin/fish "$USER"
