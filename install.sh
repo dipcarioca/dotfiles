@@ -9,7 +9,7 @@ echo "==> installing pacotes..."
 sudo pacman -S --needed --noconfirm \
   hyprland hyprlock hyprsunset hyprpaper hyprshot waybar swaync \
   kitty rofi fastfetch python-pywal colorz flatpak fish code \
-  kservice dolphin dolphin-plugins qt5-wayland qt6-wayland ark pavucontrol \
+  kservice dolphin dolphin-plugins qt5-wayland qt6-wayland ark pavucontrol-qt \
   playerctl brightnessctl python-pip ttf-jetbrains-mono-nerd ufw \
   blueman networkmanager network-manager-applet xorg-xwayland polkit-kde-agent \
   qt6ct sddm neovim vim wget tar unzip nwg-look nwg-dock-hyprland nwg-drawer \
