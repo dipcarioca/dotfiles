@@ -13,7 +13,7 @@ sudo pacman -S --needed --noconfirm \
   playerctl brightnessctl python-pip ttf-jetbrains-mono-nerd ufw \
   blueman networkmanager network-manager-applet xorg-xwayland polkit-kde-agent \
   qt6ct sddm neovim vim wget tar unzip nwg-look nwg-dock-hyprland nwg-drawer \
-  xdg-desktop-portal-hyprland xdg-desktop-portal-gtk mpv
+  xdg-desktop-portal-hyprland xdg-desktop-portal-gtk qt6-virtualkeyboard qt6-multimedia qt6-svg mpv
 
 command -v yay >/dev/null || { echo "yay not installed"; exit 1; }
 yay -S --needed --noconfirm wlogout 
@@ -34,14 +34,14 @@ cp -r ~/dotfiles/.local/* ~/.local/
 sudo cp -r ~/dotfiles/usr/share/* /usr/share/
 
 # GTK Theme
-git https://github.com/daniruiz/flat-remix-gtk.git
+git clone https://github.com/daniruiz/flat-remix-gtk.git
 sudo mv flat-remix-gtk/themes/* /usr/share/themes/
 sudo rm -r flat-remix-gtk
 
 # Icons
 git clone https://github.com/MolassesLover/Nordzy-icon
 sudo ./Nordzy-icon/./install.sh -c dark -t red
-sudo rm -r Nordyz-icon/
+sudo rm -r Nordzy-icon/
 
 echo "==> changing shell for fish and change the terminal color..."
 chsh -s /bin/fish "$USER"
