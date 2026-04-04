@@ -23,6 +23,7 @@ echo "==> creating the folders..."
 mkdir -p ~/.config
 mkdir -p ~/.local
 sudo mkdir -p /usr/share/sddm
+sudo mkdir -p /usr/share/icons/
 
 echo "==> copying settings..."
 # .config
@@ -31,6 +32,16 @@ cp -r ~/dotfiles/.config/* ~/.config/
 cp -r ~/dotfiles/.local/* ~/.local/
 # usr/share
 sudo cp -r ~/dotfiles/usr/share/* /usr/share/
+
+# GTK Theme
+git https://github.com/daniruiz/flat-remix-gtk.git
+sudo mv flat-remix-gtk/themes/* /usr/share/themes/
+sudo rm -r flat-remix-gtk
+
+# Icons
+git clone https://github.com/MolassesLover/Nordzy-icon
+sudo ./Nordzy-icon/./install.sh -c dark -t red
+sudo rm -r Nordyz-icon/
 
 echo "==> changing shell for fish and change the terminal color..."
 chsh -s /bin/fish "$USER"
