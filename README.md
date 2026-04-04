@@ -25,11 +25,10 @@ chmod +x install.sh
 ./install.sh 
 ```
 
-
 # What will you install for Dotfiles
 
 ## Personal Use
-- **Firefox** – web browser  
+- **Zen Browser** – web browser  
 - **Code** – code editor  
 - **MPV** – media player  
 - **Flameshot** – screenshots  
