@@ -35,7 +35,7 @@ sudo cp -r ~/dotfiles/usr/share/* /usr/share/
 
 # GTK Theme
 git clone https://github.com/daniruiz/flat-remix-gtk.git
-sudo mv flat-remix-gtk/themes/* /usr/share/themes/
+sudo mv flat-remix-gtk/themes/Flat-Remix-GTK-Red-Darkest/ /usr/share/themes/
 sudo rm -r flat-remix-gtk
 
 # Icons
