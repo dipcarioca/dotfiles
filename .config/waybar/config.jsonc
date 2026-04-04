@@ -1,6 +1,5 @@
 // -*- mode: jsonc -*-
 {
-    "output": ["eDP-1", "HDMI-A-2"],
     "layer": "top",     
     "position": "top", 
     "height": 45, 
