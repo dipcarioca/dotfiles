@@ -16,7 +16,7 @@ sudo pacman -S --needed --noconfirm \
   xdg-desktop-portal-hyprland xdg-desktop-portal-gtk mpv
 
 command -v yay >/dev/null || { echo "yay not installed"; exit 1; }
-yay -S --needed noconfirm wlogout 
+yay -S --needed --noconfirm wlogout 
 flatpak install app.zen_browser.zen
 
 echo "==> creating the folders..."
