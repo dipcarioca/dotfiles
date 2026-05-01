@@ -5,7 +5,7 @@ alias cleanch="sudo pacman -Scc"
 alias fixpacman="sudo rm /var/lib/pacman/db.lck"
 alias ytmp3='yt-dlp --extract-audio --audio-format mp3'
 alias py='python'
-alias update='yay -Syu --noconfirm; and flatpak update -y' 
+alias update='yay --noconfirm; and flatpak update -y' 
 alias cleanup="sudo pacman -Rsn (pacman -Qtdq)"
 
 # --- environments variants ---
