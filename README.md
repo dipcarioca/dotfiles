@@ -28,7 +28,7 @@ chmod +x install.sh
 # What will you install for Dotfiles
 
 ## Personal Use
-- **Zen Browser** – web browser  
+- **Firefox** – web browser  
 - **Code** – code editor  
 - **MPV** – media player  
 - **Flameshot** – screenshots  
@@ -58,7 +58,6 @@ chmod +x install.sh
 - **Brightnessctl** – brightness control  
 - **Playerctl** – media control  
 - **Nwg-look** – GTK settings manager  
-- **Nwg-dock-hyprland** – dock for Hyprland
 
 ## System Tools
 - **Dolphin** – file manager  
@@ -66,7 +65,5 @@ chmod +x install.sh
 - **Pavucontrol** – audio control  
 - **Blueman** – Bluetooth manager  
 - **Polkit KDE Agent** – authentication dialogs  
-- **UFW** – firewall  
-- **NetworkManager** – network handling  
 - **SDDM** – display/login manager  
 

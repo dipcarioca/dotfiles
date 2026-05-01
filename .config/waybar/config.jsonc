@@ -2,66 +2,62 @@
 {
     "layer": "top",     
     "position": "top", 
-    "height": 45, 
+    "height": 44, 
     "modules-left": [
-        "hyprland/workspaces",
-        "hyprland/window"
+        "custom/launcher",
+        "hyprland/workspaces"
     ],
     "modules-center": [
         "clock"
     ],
     "modules-right": [
         "tray",
-        "temperature",
+        "custom/weather",
         "cpu",
+        "temperature",
         "battery",
-        "pulseaudio",
         "backlight",
-        "custom/notification"
+        "pulseaudio"
     ],
 
-    "hyprland/window": {
-    "format": "{title}",
-    "separate-outputs": true,
-    "max-length": 40,         
-    "tooltip": true
+    "custom/launcher": {
+    "format": "",
+    "on-click": "rofi -show drun"
     },
 
     "hyprland/workspaces": {
     "format": "{icon}",
     "on-click": "activate",
-    "format-icons": {
-    "urgent": "",
-    "active": "",
-    "default": "",
-    "1": "1",
-    "2": "2",
-    "3": "3",
-    "4": "4",
-    "5": "5",
-    "6": "6",
-    "7": "7",
-    "8": "8",
-    "9": "9"
-  },
-  "sort-by-number": true,
-  "format-window-separator": "",
-  "icon-size":15
-  },
+     "format-icons": {
+       "urgent": "",
+        "active": ""
+      }
+    },
+
    "tray": {
-        "icon-size": 15,
-        "spacing": 10,
+        "icon-size": 14,
+        "spacing": 8,
         "show-passive-items": true
     },
     "clock": {
         "timezone": "America/Sao_Paulo",
         "tooltip-format": "<big>{:%Y %B}</big>\n<tt><small>{calendar}</small></tt>",
-        "format": " {:%d/%m/%Y |  %H:%M}"
+        "format": " {:%H:%M}",
+        "format-alt": " {:%d/%m/%Y}"
     },
     "cpu": {
-        "format": "  {usage}%",
+        "format": "󰍛 {usage}%",
         "tooltip": false
     },
+
+    "custom/weather": {
+    "exec": "~/.config/waybar/scripts/get_weather.sh Rio de Janeiro+Brazil",
+    "return-type": "json",
+    "format": "{}",
+    "tooltip": true,
+    "interval": 3600
+    },
+
     "temperature": {
         // "thermal-zone": 2,
         // "hwmon-path": "/sys/class/hwmon/hwmon2/temp1_input",
@@ -72,7 +68,6 @@
     },
 
     "backlight": {
-        // "device": "acpi_video1",
         "format": "{icon} {percent}%",
         "format-icons": ["", "", "", "", "", "", "", "", ""],
         "on-click": "~/.config/waybar/scripts/hyprsunset.sh",
@@ -81,50 +76,28 @@
 
     "battery": {
         "states": {
-            "full": 82,
+            "full": 85,
             "warning": 30,
             "critical": 15
         },
         "format": "{icon} {capacity}%",
-        "format-full": "{icon} {capacity}%",
-        "format-charging": " {capacity}%",
-        "format-plugged": " {capacity}%",
-        "format-alt": "{icon} {time}",
-        "format-icons": ["", "", "", "", ""]
-    },
+        "format-icons": {
+          "default": ["󰂎", "󰁺", "󰁻", "󰁼", "󰁽", "󰁾", "󰁿", "󰂀", "󰂁", "󰂂", "󰁹"]
+        }
+    }, 
 
     "pulseaudio": {
         // "scroll-step": 1, // %, can be a float
-        "format": "{icon} {volume}%",
-        "format-bluetooth": "{icon} {volume}%",
+        "format": "{icon}{volume}%",
+        "format-bluetooth": "{icon}{volume}%",
+        "format-muted": "󰝟 Mutado",
         "format-icons": {
-            "headphone": " ",
+            "headphone": "󰋎 ",
             "default": [" ", " ", " "]
+
         },
         "on-click": "wpctl set-mute @DEFAULT_AUDIO_SINK@ toggle",
-        "on-click-right": "pavucontrol-qt",
-        
+        "on-click-right": "pavucontrol",
         "scroll-step": 1
-    },
-
-    "custom/notification": {
-    "tooltip-format": "Notificações",
-    "format": "{icon}",
-    "format-icons": {
-        "notification": "",
-        "none": "",
-        "dnd-notification": "",
-        "dnd-none": "",
-        "inhibited-notification": "",
-        "inhibited-none": "",
-        "dnd-inhibited-notification": "",
-        "dnd-inhibited-none": ""
-    },
-        "return-type": "json",
-        "exec-if": "which swaync-client",
-        "exec": "swaync-client -swb",
-        "on-click": "swaync-client -t -sw",
-        "on-click-right": "swaync-client -d -sw",
-        "escape": true
-    },
+    }
 }
