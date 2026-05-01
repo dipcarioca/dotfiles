@@ -10,14 +10,13 @@ sudo pacman -S --needed --noconfirm \
   hyprland hyprlock hyprsunset hyprpaper hyprshot waybar swaync \
   kitty rofi fastfetch python-pywal flatpak fish code \
   kservice dolphin dolphin-plugins qt5-wayland qt6-wayland ark pavucontrol-qt \
-  playerctl brightnessctl python-pip ttf-jetbrains-mono-nerd ufw \
+  playerctl brightnessctl python-pip ttf-jetbrains-mono-nerd \
   blueman networkmanager network-manager-applet xorg-xwayland polkit-kde-agent \
-  qt6ct sddm neovim vim wget tar unzip nwg-look nwg-dock-hyprland nwg-drawer \
+  qt6ct sddm neovim vim wget tar unzip nwg-look \
   xdg-desktop-portal-hyprland xdg-desktop-portal-gtk qt6-virtualkeyboard qt6-multimedia qt6-svg mpv
 
 command -v yay >/dev/null || { echo "yay not installed"; exit 1; }
 yay -S --needed --noconfirm wlogout 
-flatpak install app.zen_browser.zen
 
 echo "==> creating the folders..."
 mkdir -p ~/.config
@@ -56,7 +55,6 @@ sudo cp ~/dotfiles/etc/sddm.conf /etc/sddm.conf
 sudo cp -r ~/dotfiles/etc/sddm.conf.d/ /etc/sddm.conf.d
 
 echo "==> everything is ready, activating services"
-sudo ufw enable
 command -v balooctl6 && balooctl6 disable
 echo "..."
 sleep 2 && sudo systemctl enable --now sddm
